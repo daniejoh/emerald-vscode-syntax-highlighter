@@ -2,7 +2,7 @@
 
 A simple syntax highlighter for the emerald programming language.
 
-Info about Emerald can be found on: [a link](http://www.emeraldprogramminglanguage.org/)
+Info about Emerald can be found [here](http://www.emeraldprogramminglanguage.org/)
 
 Note!: This was put together as fast as possible. The naming is probably wrong in a lot of places.
 
