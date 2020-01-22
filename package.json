@@ -1,0 +1,25 @@
+{
+    "name": "emerald-syntax-highlighting",
+    "displayName": "Emerald Syntax Highlighting",
+    "description": "A syntax highlighter for the emerald programming language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "emerald",
+            "aliases": ["Emerald", "emerald"],
+            "extensions": [".m",".em"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "emerald",
+            "scopeName": "source.em",
+            "path": "./syntaxes/emerald.tmLanguage.json"
+        }]
+    }
+}

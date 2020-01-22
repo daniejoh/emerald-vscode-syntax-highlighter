@@ -1,0 +1,102 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Emerald",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#literals"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#characters"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#storage"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.emerald",
+					"match": "\\b(for|while|by|and|as|assert|at|attached|awaiting|begin|checkpoint|else|elseif|end|enumeration|exit|export|failure|fix|from|function|if|immutable|import|initially|isfixed|locate|loop|monitor|move|object|on|op|operation|or|primitive|process|record|recovery|refix|return|returnandfail|signal|then|to|type|unavailable|unfix|union|view|visit|wait|when|where)\\b"
+				}
+			]
+		},
+		"literals": {
+			"patterns": [
+				{
+					"name": "constant.language.boolean.emerald",
+					"match": "\\b(false|nil|self|true)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.emerald",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.emerald",
+					"match": "\\\\."
+				}
+			]
+		},
+		"characters": {
+			"patterns": [
+				{
+					"name": "constant.character.emerald",
+					"match": "\\b(asd)\\b"
+				},
+				{
+					"name": "constant.numeric.decimal.emerald",
+					"match": "\\b([0-9])\\b"
+				},
+				{
+					"name": "support.function.console.emerald",
+					"match": "\\b(\\s\\<\\-\\s)\\b"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.object.property.emerald",
+					"match": "\\b(\\$)\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.percentage.emerald",
+					"begin": "%",
+					"end": "\n"
+				}
+			]
+		},
+		"storage": {
+			"patterns": [
+				{
+					"name": "storage.type.emerald",
+					"match": "\\b(const|var|begin|end)\\b"
+				},
+				{
+					"name": "support.type.primitive.emerald",
+					"match": "\\b(Any|Array|BitChunk|Boolean|Character|ConcreteType|Condition|InStream|Integer|Node|NodeList|NodeListElement|Directory|Handler|None|OutStream|Real|Sequence|SequenceOfAny|SequenceOfString|Signature|AOpVector|AOpVectorE|AParamList|String|Time|Type|Vector|VectorOfInt|ImmutableVectorOfString)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.em"
+}
